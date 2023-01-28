@@ -23,7 +23,7 @@ def main(page):
     # get championships
     championships = soup.find_all("div", {'class': "matchCard"})
 
-    def get_match_info(championships):
+    def get_championship_info(championships):
 
         championship_title = championships.contents[1].find("h2").text.strip()
         all_matches = championships.contents[3].find_all("li")
